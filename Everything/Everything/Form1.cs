@@ -37,12 +37,7 @@ namespace Everything
             }
             Print(e.ChangeType + " : " + e.FullPath);
         }
-
-        /// <summary>
-        /// 文件或目录重命名时触发的事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        
         private void OnFileRenamed(object sender, RenamedEventArgs e)
         {
             Print("Rename : " + e.OldFullPath + " > " + e.FullPath);
