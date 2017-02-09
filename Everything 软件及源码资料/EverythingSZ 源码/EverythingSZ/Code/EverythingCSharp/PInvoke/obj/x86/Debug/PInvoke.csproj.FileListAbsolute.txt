@@ -1,0 +1,5 @@
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\PInvoke\bin\Debug\PInvoke.dll.config
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\PInvoke\bin\Debug\PInvoke.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\PInvoke\bin\Debug\PInvoke.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\PInvoke\obj\x86\Debug\PInvoke.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\PInvoke\obj\x86\Debug\PInvoke.pdb

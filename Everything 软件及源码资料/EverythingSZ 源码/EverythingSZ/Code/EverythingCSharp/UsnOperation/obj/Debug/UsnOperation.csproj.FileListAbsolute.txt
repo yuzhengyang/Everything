@@ -1,0 +1,7 @@
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\UsnOperation\bin\Debug\UsnOperation.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\UsnOperation\bin\Debug\UsnOperation.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\UsnOperation\bin\Debug\PInvoke.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\UsnOperation\bin\Debug\PInvoke.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\UsnOperation\obj\Debug\UsnOperation.csprojResolveAssemblyReference.cache
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\UsnOperation\obj\Debug\UsnOperation.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\UsnOperation\obj\Debug\UsnOperation.pdb

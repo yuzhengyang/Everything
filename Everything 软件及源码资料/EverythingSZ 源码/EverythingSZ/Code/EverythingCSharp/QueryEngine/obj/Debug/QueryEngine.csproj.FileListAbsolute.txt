@@ -1,0 +1,9 @@
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\QueryEngine\bin\Debug\QueryEngine.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\QueryEngine\bin\Debug\QueryEngine.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\QueryEngine\bin\Debug\UsnOperation.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\QueryEngine\bin\Debug\PInvoke.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\QueryEngine\bin\Debug\UsnOperation.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\QueryEngine\bin\Debug\PInvoke.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\QueryEngine\obj\Debug\QueryEngine.csprojResolveAssemblyReference.cache
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\QueryEngine\obj\Debug\QueryEngine.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\QueryEngine\obj\Debug\QueryEngine.pdb

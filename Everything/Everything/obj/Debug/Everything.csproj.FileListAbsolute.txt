@@ -1,0 +1,9 @@
+I:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Everything.exe
+I:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Everything.pdb
+I:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.csprojResolveAssemblyReference.cache
+I:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.Form1.resources
+I:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.Properties.Resources.resources
+I:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.csproj.GenerateResource.Cache
+I:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.exe
+I:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.pdb
+I:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Everything.exe.config

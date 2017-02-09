@@ -1,0 +1,12 @@
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\bin\Debug\USNJournalConsole.exe.config
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\bin\Debug\USNJournalConsole.exe
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\bin\Debug\USNJournalConsole.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\bin\Debug\QueryEngine.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\bin\Debug\UsnOperation.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\bin\Debug\PInvoke.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\bin\Debug\QueryEngine.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\bin\Debug\UsnOperation.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\bin\Debug\PInvoke.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\obj\x86\Debug\USNJournalConsole.csprojResolveAssemblyReference.cache
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\obj\x86\Debug\USNJournalConsole.exe
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\USNJournalConsole\obj\x86\Debug\USNJournalConsole.pdb

@@ -1,0 +1,14 @@
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\obj\x86\Debug\WinFormUI.csprojResolveAssemblyReference.cache
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\obj\x86\Debug\WinFormUI.MainForm.resources
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\obj\x86\Debug\WinFormUI.Properties.Resources.resources
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\obj\x86\Debug\WinFormUI.csproj.GenerateResource.Cache
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\bin\Debug\WinFormUI.exe
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\bin\Debug\WinFormUI.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\bin\Debug\QueryEngine.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\bin\Debug\UsnOperation.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\bin\Debug\PInvoke.dll
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\bin\Debug\QueryEngine.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\bin\Debug\UsnOperation.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\bin\Debug\PInvoke.pdb
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\obj\x86\Debug\WinFormUI.exe
+I:\CoCo\Third\everythingsz-22853\EverythingSZ\Code\EverythingCSharp\WinFormUI\obj\x86\Debug\WinFormUI.pdb
