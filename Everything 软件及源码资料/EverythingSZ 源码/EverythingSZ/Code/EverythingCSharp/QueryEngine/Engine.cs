@@ -14,7 +14,7 @@ namespace QueryEngine
         /// </summary>
         protected const UInt64 ROOT_FILE_REFERENCE_NUMBER = 0x5000000000005L;
 
-        protected static readonly string excludeFolders = string.Join("|",
+        protected static readonly IEnumerable<string> excludeFolders = 
             new string[]
             {
                 "$RECYCLE.BIN",
@@ -31,40 +31,36 @@ namespace QueryEngine
                 "$UpCase",
                 "$Volume",
                 "$Extend"
-            }).ToUpper();
+            }.Select(e=>e.ToUpper());
 
-        public static IEnumerable<DriveInfo> GetAllFixedNtfsDrives()
+        public static IEnumerable<DriveInfo> GetAllFixedNtfsDrives(string driver = "")
         {
             //return DriveInfo.GetDrives()
             //    .Where(d => d.DriveType == DriveType.Fixed && d.DriveFormat.ToUpper() == "NTFS");
             var dirs = DriveInfo.GetDrives();
             //return dirs.Where(d => d.DriveType == DriveType.Removable && d.DriveFormat.ToUpper() == "NTFS");
-            return dirs.Where(d => d.Name.Contains("I") && d.DriveFormat.ToUpper() == "NTFS");
+            return dirs.Where(d => d.IsReady&& d.Name.ToUpper().Contains(driver.ToUpper()) && d.DriveFormat.ToUpper() == "NTFS");
         }
 
-        public static List<FileAndDirectoryEntry> GetAllFilesAndDirectories()
+        public static List<FileAndDirectoryEntry> GetAllFilesAndDirectories(string driver="")
         {
             List<FileAndDirectoryEntry> result = new List<FileAndDirectoryEntry>();
 
-            IEnumerable<DriveInfo> fixedNtfsDrives = GetAllFixedNtfsDrives();
+            IEnumerable<DriveInfo> fixedNtfsDrives = GetAllFixedNtfsDrives(driver);
 
-            while (true)
+            foreach (var drive in fixedNtfsDrives)
             {
-                foreach (var drive in fixedNtfsDrives)
-                {
-                    var usnOperator = new UsnOperator(drive);
+                var usnOperator = new UsnOperator(drive);
 
-                    var usnEntries = usnOperator.GetEntries().Where(e => !excludeFolders.Contains(e.FileName.ToUpper()));
+                var usnEntries = usnOperator.GetEntries().Where(e => !excludeFolders.Contains(e.FileName.ToUpper()));
+                var folders = usnEntries.Where(e => e.IsFolder).ToArray();
+                List<FrnFilePath> paths = GetFolderPath(folders, drive);
 
-                    var folders = usnEntries.Where(e => e.IsFolder).ToArray();
-                    List<FrnFilePath> paths = GetFolderPath(folders, drive);
-
-                    result.AddRange(usnEntries.Join(
-                        paths,
-                        usn => usn.ParentFileReferenceNumber,
-                        path => path.FileReferenceNumber,
-                        (usn, path) => new FileAndDirectoryEntry(usn, path.Path)));
-                }
+                result.AddRange(usnEntries.Join(
+                    paths,
+                    usn => usn.ParentFileReferenceNumber,
+                    path => path.FileReferenceNumber,
+                    (usn, path) => new FileAndDirectoryEntry(usn, path.Path)));
             }
 
             //Console.WriteLine(result.Count);
@@ -89,7 +85,7 @@ namespace QueryEngine
         {
             Dictionary<UInt64, FrnFilePath> pathDic = new Dictionary<ulong, FrnFilePath>();
             pathDic.Add(ROOT_FILE_REFERENCE_NUMBER,
-                new FrnFilePath(ROOT_FILE_REFERENCE_NUMBER, null, string.Empty, drive.Name.TrimEnd('\\')));
+                new FrnFilePath(ROOT_FILE_REFERENCE_NUMBER, null, string.Empty, drive.Name));
 
             foreach (var folder in folders)
             {
@@ -115,12 +111,13 @@ namespace QueryEngine
                         && parentValue.ParentFileReferenceNumber.HasValue
                         && pathDic.ContainsKey(parentValue.ParentFileReferenceNumber.Value))
                     {
+                        var temp = currentValue;
                         currentValue = parentValue;
 
                         if (currentValue.ParentFileReferenceNumber.HasValue
                             && pathDic.ContainsKey(currentValue.ParentFileReferenceNumber.Value))
                         {
-                            treeWalkStack.Push(key);
+                            treeWalkStack.Push(temp.FileReferenceNumber);
                             parentValue = pathDic[currentValue.ParentFileReferenceNumber.Value];
                         }
                         else
