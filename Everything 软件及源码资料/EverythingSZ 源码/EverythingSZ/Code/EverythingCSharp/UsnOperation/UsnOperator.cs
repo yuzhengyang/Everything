@@ -101,7 +101,7 @@ namespace UsnOperation
             {
                 MFT_ENUM_DATA mftEnumData = new MFT_ENUM_DATA();
                 mftEnumData.StartFileReferenceNumber = 0;
-                mftEnumData.LowUsn = 21296;
+                mftEnumData.LowUsn = 0;//21296;
                 mftEnumData.HighUsn = this.ntfsUsnJournalData.NextUsn;
 
                 int sizeMftEnumData = Marshal.SizeOf(mftEnumData);
@@ -137,8 +137,8 @@ namespace UsnOperation
                     IntPtr ptrUsnRecord = new IntPtr(ptrData.ToInt32() + sizeof(Int64));
 
                     int count = 0;
-                    Console.WriteLine("outBytesCount: " + outBytesCount + "");
-                    Console.WriteLine("=======>>");////////
+                    //Console.WriteLine("outBytesCount: " + outBytesCount + "");
+                    //Console.WriteLine("=======>>");////////
                     UsnEntry ue = null;
                     while (outBytesCount > 60)
                     {
@@ -150,9 +150,9 @@ namespace UsnOperation
 
                         outBytesCount -= usnRecord.RecordLength;
 
-                        Console.WriteLine(count++ + "、" + ue.Usn + "\t" + usnRecord.FileName);////////
+                        //Console.WriteLine(count++ + "、" + ue.Usn + "\t" + usnRecord.FileName);////////
                     }
-                    Console.WriteLine(" =======<<");////////
+                    //Console.WriteLine(" =======<<");////////
 
                     Marshal.WriteInt64(ptrMftEnumData, Marshal.ReadInt64(ptrData, 0));
                 }
