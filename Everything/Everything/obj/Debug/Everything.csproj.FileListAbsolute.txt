@@ -7,3 +7,15 @@ I:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.csproj.Gene
 I:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.exe
 I:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.pdb
 I:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Everything.exe.config
+D:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Everything.exe.config
+D:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.exe
+D:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.pdb
+D:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.csprojResolveAssemblyReference.cache
+D:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.Properties.Resources.resources
+D:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.Views.MainForm.resources
+D:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.csproj.GenerateResource.Cache
+D:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Everything.exe
+D:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Everything.pdb
+D:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Y.FileQueryEngine.dll
+D:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Y.FileQueryEngine.pdb
+D:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Y.FileQueryEngine.xml

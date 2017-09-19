@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Y.FileQueryEngine</name>
+    </assembly>
+    <members>
+        <member name="F:Y.FileQueryEngine.QueryEngine.FileQueryEngine.ROOT_FILE_REFERENCE_NUMBER">
+            <summary>
+            When its values is 1407374883553285(0x5000000000005L), it means this file/folder is under drive root
+            </summary>
+        </member>
+        <member name="M:Y.FileQueryEngine.QueryEngine.FileQueryEngine.GetFixedNtfsDrives">
+            <summary>
+            获取所有NTFS文件系统的固定磁盘
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.QueryEngine.FileQueryEngine.GetReadyNtfsDrives">
+            <summary>
+            获取所有NTFS文件系统的磁盘
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.QueryEngine.FileQueryEngine.GetAllFiles(System.IO.DriveInfo)">
+            <summary>
+            查询磁盘的所有文件
+            </summary>
+            <param name="drive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.QueryEngine.FileQueryEngine.GetAllFileEntrys(System.IO.DriveInfo)">
+            <summary>
+            查询磁盘的所有文件
+            </summary>
+            <param name="drive"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Y.FileQueryEngine.UsnOperation.UsnEntry">
+            <summary>
+            TODO: Update summary.
+            </summary>
+        </member>
+        <member name="P:Y.FileQueryEngine.UsnOperation.UsnEntry.ParentFileReferenceNumber">
+            <summary>
+            Gets the parent file reference number.
+            When its values is 1407374883553285(0x5000000000005L), it means this file/folder is under drive root
+            </summary>
+            <value>
+            The parent file reference number.
+            </value>
+        </member>
+        <member name="T:Y.FileQueryEngine.Win32.Structures.BY_HANDLE_FILE_INFORMATION">
+            <summary>
+            By Handle File Information structure, contains File Attributes(32bits), Creation Time(FILETIME),
+            Last Access Time(FILETIME), Last Write Time(FILETIME), Volume Serial Number(32bits),
+            File Size High(32bits), File Size Low(32bits), Number of Links(32bits), File Index High(32bits),
+            File Index Low(32bits).
+            </summary>
+        </member>
+        <member name="T:Y.FileQueryEngine.Win32.Structures.CREATE_USN_JOURNAL_DATA">
+            <summary>
+            Create USN Journal Data structure, contains Maximum Size(64bits) and Allocation Delta(64(bits).
+            </summary>
+        </member>
+        <member name="T:Y.FileQueryEngine.Win32.Structures.MFT_ENUM_DATA">
+            <summary>
+            MFT Enum Data structure, contains Start File Reference Number(64bits), Low USN(64bits),
+            High USN(64bits).
+            </summary>
+        </member>
+        <member name="T:Y.FileQueryEngine.Win32.Structures.READ_USN_JOURNAL_DATA">
+            <summary>
+            Contains the Start USN(64bits), Reason Mask(32bits), Return Only on Close flag(32bits),
+            Time Out(64bits), Bytes To Wait For(64bits), and USN Journal ID(64bits).
+            </summary>
+        </member>
+        <member name="T:Y.FileQueryEngine.Win32.Structures.USN_JOURNAL_DATA">
+            <summary>
+            USN Journal Data structure, contains USN Journal ID(64bits), First USN(64bits), Next USN(64bits),
+            Lowest Valid USN(64bits), Max USN(64bits), Maximum Size(64bits) and Allocation Delta(64bits).
+            </summary>
+        </member>
+        <member name="T:Y.FileQueryEngine.Win32.Structures.USN_RECORD_V2">
+            <summary>
+            Contains the USN Record Length(32bits), USN(64bits), File Reference Number(64bits), 
+            Parent File Reference Number(64bits), Reason Code(32bits), File Attributes(32bits),
+            File Name Length(32bits), the File Name Offset(32bits) and the File Name.
+            </summary>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Structures.USN_RECORD_V2.#ctor(System.IntPtr)">
+            <summary>
+            USN Record Constructor
+            </summary>
+            <param name="usnRecordPtr">Buffer of bytes representing the USN Record</param>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.CreateFile(System.String,System.UInt32,System.UInt32,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)">
+            <summary>
+            Creates the file specified by 'lpFileName' with desired access, share mode, security attributes,
+            creation disposition, flags and attributes.
+            </summary>
+            <param name="lpFileName">Fully qualified path to a file</param>
+            <param name="dwDesiredAccess">Requested access (write, read, read/write, none)</param>
+            <param name="dwShareMode">Share mode (read, write, read/write, delete, all, none)</param>
+            <param name="lpSecurityAttributes">IntPtr to a 'SECURITY_ATTRIBUTES' structure</param>
+            <param name="dwCreationDisposition">Action to take on file or device specified by 'lpFileName' (CREATE_NEW,
+            CREATE_ALWAYS, OPEN_ALWAYS, OPEN_EXISTING, TRUNCATE_EXISTING)</param>
+            <param name="dwFlagsAndAttributes">File or device attributes and flags (typically FILE_ATTRIBUTE_NORMAL)</param>
+            <param name="hTemplateFile">IntPtr to a valid handle to a template file with 'GENERIC_READ' access right</param>
+            <returns>IntPtr handle to the 'lpFileName' file or device or 'INVALID_HANDLE_VALUE'</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.CloseHandle(System.IntPtr)">
+            <summary>
+            Closes the file specified by the IntPtr 'hObject'.
+            </summary>
+            <param name="hObject">IntPtr handle to a file</param>
+            <returns>'true' if successful, otherwise 'false'</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.GetFileInformationByHandle(System.IntPtr,Y.FileQueryEngine.Win32.Structures.BY_HANDLE_FILE_INFORMATION@)">
+            <summary>
+            Fills the 'BY_HANDLE_FILE_INFORMATION' structure for the file specified by 'hFile'.
+            </summary>
+            <param name="hFile">Fully qualified name of a file</param>
+            <param name="lpFileInformation">Out BY_HANDLE_FILE_INFORMATION argument</param>
+            <returns>'true' if successful, otherwise 'false'</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.DeleteFile(System.String)">
+            <summary>
+            Deletes the file specified by 'fileName'.
+            </summary>
+            <param name="fileName">Fully qualified path to the file to delete</param>
+            <returns>'true' if successful, otherwise 'false'</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.ReadFile(System.IntPtr,System.IntPtr,System.UInt32,System.UInt32@,System.IntPtr)">
+            <summary>
+            Read data from the file specified by 'hFile'.
+            </summary>
+            <param name="hFile">IntPtr handle to the file to read</param>
+            <param name="lpBuffer">IntPtr to a buffer of bytes to receive the bytes read from 'hFile'</param>
+            <param name="nNumberOfBytesToRead">Number of bytes to read from 'hFile'</param>
+            <param name="lpNumberOfBytesRead">Number of bytes read from 'hFile'</param>
+            <param name="lpOverlapped">IntPtr to an 'OVERLAPPED' structure</param>
+            <returns>'true' if successful, otherwise 'false'</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.WriteFile(System.IntPtr,System.IntPtr,System.UInt32,System.UInt32@,System.Int32)">
+            <summary>
+            Writes the 
+            </summary>
+            <param name="hFile">IntPtr handle to the file to write</param>
+            <param name="bytes">IntPtr to a buffer of bytes to write to 'hFile'</param>
+            <param name="nNumberOfBytesToWrite">Number of bytes in 'lpBuffer' to write to 'hFile'</param>
+            <param name="lpNumberOfBytesWritten">Number of bytes written to 'hFile'</param>
+            <param name="overlapped">IntPtr to an 'OVERLAPPED' structure</param>
+            <returns>'true' if successful, otherwise 'false'</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.WriteFile(System.IntPtr,System.Byte[],System.UInt32,System.UInt32@,System.Int32)">
+            <summary>
+            Writes the data in 'lpBuffer' to the file specified by 'hFile'.
+            </summary>
+            <param name="hFile">IntPtr handle to file to write</param>
+            <param name="lpBuffer">Buffer of bytes to write to file 'hFile'</param>
+            <param name="nNumberOfBytesToWrite">Number of bytes in 'lpBuffer' to write to 'hFile'</param>
+            <param name="lpNumberOfBytesWritten">Number of bytes written to 'hFile'</param>
+            <param name="overlapped">IntPtr to an 'OVERLAPPED' structure</param>
+            <returns>'true' if successful, otherwise 'false'</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.DeviceIoControl(System.IntPtr,System.UInt32,System.IntPtr,System.Int32,Y.FileQueryEngine.Win32.Structures.USN_JOURNAL_DATA@,System.Int32,System.UInt32@,System.IntPtr)">
+            <summary>
+            Sends the 'dwIoControlCode' to the device specified by 'hDevice'.
+            </summary>
+            <param name="hDevice">IntPtr handle to the device to receive 'dwIoControlCode'</param>
+            <param name="dwIoControlCode">Device IO Control Code to send</param>
+            <param name="lpInBuffer">Input buffer if required</param>
+            <param name="nInBufferSize">Size of input buffer</param>
+            <param name="lpOutBuffer">Output buffer if required</param>
+            <param name="nOutBufferSize">Size of output buffer</param>
+            <param name="lpBytesReturned">Number of bytes returned in output buffer</param>
+            <param name="lpOverlapped">IntPtr to an 'OVERLAPPED' structure</param>
+            <returns>'true' if successful, otherwise 'false'</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.DeviceIoControl(System.IntPtr,System.UInt32,System.IntPtr,System.Int32,System.IntPtr,System.Int32,System.UInt32@,System.IntPtr)">
+            <summary>
+            Sends the control code 'dwIoControlCode' to the device driver specified by 'hDevice'.
+            </summary>
+            <param name="hDevice">IntPtr handle to the device to receive 'dwIoControlCode</param>
+            <param name="dwIoControlCode">Device IO Control Code to send</param>
+            <param name="lpInBuffer">Input buffer if required</param>
+            <param name="nInBufferSize">Size of input buffer </param>
+            <param name="lpOutBuffer">Output buffer if required</param>
+            <param name="nOutBufferSize">Size of output buffer</param>
+            <param name="lpBytesReturned">Number of bytes returned</param>
+            <param name="lpOverlapped">Pointer to an 'OVERLAPPED' struture</param>
+            <returns></returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.ZeroMemory(System.IntPtr,System.Int32)">
+            <summary>
+            Sets the number of bytes specified by 'size' of the memory associated with the argument 'ptr' 
+            to zero.
+            </summary>
+            <param name="ptr"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.WriteAlternateStream(System.String,System.String)">
+            <summary>
+            Writes the data in 'text' to the alternate stream ':Description' of the file 'currentFile.
+            </summary>
+            <param name="currentfile">Fully qualified path to a file</param>
+            <param name="text">Data to write to the ':Description' stream</param>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.ReadAlternateStream(System.String)">
+            <summary>
+            Adds the ':Description' alternate stream name to the argument 'currentFile'.
+            </summary>
+            <param name="currentfile">The file whose alternate stream is to be read</param>
+            <returns>A string value representing the value of the alternate stream</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.ReadAlternateStreamEx(System.String)">
+            <summary>
+            Reads the stream represented by 'currentFile'.
+            </summary>
+            <param name="currentfile">Fully qualified path including stream</param>
+            <returns>Value of the alternate stream as a string</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.ReadAlternateStreamEncrypted(System.String)">
+            <summary>
+            Read the encrypted alternate stream specified by 'currentFile'.
+            </summary>
+            <param name="currentfile">Fully qualified path to encrypted alternate stream</param>
+            <returns>The un-encrypted value of the alternate stream as a string</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.WriteAlternateStreamEncrypted(System.String,System.String)">
+            <summary>
+            Writes the value of 'LicenseString' as an encrypted stream to the file:stream specified
+            by 'currentFile'.
+            </summary>
+            <param name="currentFile">Fully qualified path to the alternate stream</param>
+            <param name="LicenseString">The string value to encrypt and write to the alternate stream</param>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.EncryptLicenseString(System.String)">
+            <summary>
+            Encrypt the string 'LicenseString' argument and return as a MemoryStream.
+            </summary>
+            <param name="LicenseString">The string value to encrypt</param>
+            <returns>A MemoryStream which contains the encrypted value of 'LicenseString'</returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.DecryptLicenseString(System.IntPtr,System.UInt32)">
+            <summary>
+            Given an IntPtr to a bufer and the number of bytes, decrypt the buffer and return an 
+            unencrypted text string.
+            </summary>
+            <param name="buffer">An IntPtr to the 'buffer' containing the encrypted string</param>
+            <param name="nBytes">The number of bytes in 'buffer' to decrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.GetBytesFromHexString(System.String)">
+            <summary>
+            Gets the byte array generated from the value of 'hexString'.
+            </summary>
+            <param name="hexString">Hexadecimal string</param>
+            <returns>Array of bytes generated from 'hexString'.</returns>
+        </member>
+    </members>
+</doc>

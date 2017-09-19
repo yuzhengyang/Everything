@@ -1,0 +1,16 @@
+D:\CoCo\Demo\EverythingCSharp\Y.FileQueryEngine\bin\Debug\Y.FileQueryEngine.dll
+D:\CoCo\Demo\EverythingCSharp\Y.FileQueryEngine\bin\Debug\Y.FileQueryEngine.pdb
+D:\CoCo\Demo\EverythingCSharp\Y.FileQueryEngine\obj\Debug\Y.FileQueryEngine.dll
+D:\CoCo\Demo\EverythingCSharp\Y.FileQueryEngine\obj\Debug\Y.FileQueryEngine.pdb
+D:\CoCo\GitHub\Fork\Fork.Net\Fork.Net.SpeciallyTools\Y.FileQueryEngine\bin\Debug\Y.FileQueryEngine.XML
+D:\CoCo\GitHub\Fork\Fork.Net\Fork.Net.SpeciallyTools\Y.FileQueryEngine\bin\Debug\Y.FileQueryEngine.dll
+D:\CoCo\GitHub\Fork\Fork.Net\Fork.Net.SpeciallyTools\Y.FileQueryEngine\bin\Debug\Y.FileQueryEngine.pdb
+D:\CoCo\GitHub\Fork\Fork.Net\Fork.Net.SpeciallyTools\Y.FileQueryEngine\obj\Debug\Y.FileQueryEngine.dll
+D:\CoCo\GitHub\Fork\Fork.Net\Fork.Net.SpeciallyTools\Y.FileQueryEngine\obj\Debug\Y.FileQueryEngine.pdb
+D:\CoCo\GitHub\Fork\Fork.Net\Fork.Net.SpeciallyTools\Y.FileQueryEngine\obj\Debug\Y.FileQueryEngine.csprojResolveAssemblyReference.cache
+D:\CoCo\GitHub\Everything\Everything\Y.FileQueryEngine\bin\Debug\Y.FileQueryEngine.XML
+D:\CoCo\GitHub\Everything\Everything\Y.FileQueryEngine\bin\Debug\Y.FileQueryEngine.dll
+D:\CoCo\GitHub\Everything\Everything\Y.FileQueryEngine\bin\Debug\Y.FileQueryEngine.pdb
+D:\CoCo\GitHub\Everything\Everything\Y.FileQueryEngine\obj\Debug\Y.FileQueryEngine.csprojResolveAssemblyReference.cache
+D:\CoCo\GitHub\Everything\Everything\Y.FileQueryEngine\obj\Debug\Y.FileQueryEngine.dll
+D:\CoCo\GitHub\Everything\Everything\Y.FileQueryEngine\obj\Debug\Y.FileQueryEngine.pdb
