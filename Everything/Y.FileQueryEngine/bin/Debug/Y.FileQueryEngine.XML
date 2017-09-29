@@ -163,7 +163,7 @@
             <param name="overlapped">IntPtr to an 'OVERLAPPED' structure</param>
             <returns>'true' if successful, otherwise 'false'</returns>
         </member>
-        <member name="M:Y.FileQueryEngine.Win32.Win32Api.DeviceIoControl(System.IntPtr,System.UInt32,System.IntPtr,System.Int32,Y.FileQueryEngine.Win32.Structures.USN_JOURNAL_DATA@,System.Int32,System.UInt32@,System.IntPtr)">
+        <member name="M:Y.FileQueryEngine.Win32.Win32Api.DeviceIoControl(System.IntPtr,System.UInt32,System.IntPtr,System.Int64,Y.FileQueryEngine.Win32.Structures.USN_JOURNAL_DATA@,System.Int64,System.UInt32@,System.IntPtr)">
             <summary>
             Sends the 'dwIoControlCode' to the device specified by 'hDevice'.
             </summary>

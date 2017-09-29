@@ -258,7 +258,7 @@ namespace Y.FileQueryEngine.UsnOperation
 
         private UsnErrorCode QueryUSNJournal()
         {
-            int sizeUsnJournalData = Marshal.SizeOf(this.ntfsUsnJournalData);
+            long sizeUsnJournalData = Marshal.SizeOf(this.ntfsUsnJournalData);
 
             USN_JOURNAL_DATA tempUsnJournalData;
 

@@ -37,6 +37,7 @@
             this.TBLastFrn = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.BTLine = new System.Windows.Forms.Button();
+            this.BTCreateUSN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CBDrives
@@ -50,7 +51,7 @@
             // 
             // BTFind
             // 
-            this.BTFind.Location = new System.Drawing.Point(364, 49);
+            this.BTFind.Location = new System.Drawing.Point(364, 15);
             this.BTFind.Name = "BTFind";
             this.BTFind.Size = new System.Drawing.Size(109, 55);
             this.BTFind.TabIndex = 1;
@@ -116,7 +117,7 @@
             // 
             // BTLine
             // 
-            this.BTLine.Location = new System.Drawing.Point(502, 49);
+            this.BTLine.Location = new System.Drawing.Point(502, 15);
             this.BTLine.Name = "BTLine";
             this.BTLine.Size = new System.Drawing.Size(109, 55);
             this.BTLine.TabIndex = 8;
@@ -124,11 +125,22 @@
             this.BTLine.UseVisualStyleBackColor = true;
             this.BTLine.Click += new System.EventHandler(this.BTLine_Click);
             // 
+            // BTCreateUSN
+            // 
+            this.BTCreateUSN.Location = new System.Drawing.Point(364, 80);
+            this.BTCreateUSN.Name = "BTCreateUSN";
+            this.BTCreateUSN.Size = new System.Drawing.Size(109, 23);
+            this.BTCreateUSN.TabIndex = 9;
+            this.BTCreateUSN.Text = "创建USN";
+            this.BTCreateUSN.UseVisualStyleBackColor = true;
+            this.BTCreateUSN.Click += new System.EventHandler(this.BTCreateUSN_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 557);
+            this.Controls.Add(this.BTCreateUSN);
             this.Controls.Add(this.BTLine);
             this.Controls.Add(this.TBLastFrn);
             this.Controls.Add(this.label3);
@@ -158,5 +170,6 @@
         private System.Windows.Forms.TextBox TBLastFrn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BTLine;
+        private System.Windows.Forms.Button BTCreateUSN;
     }
 }

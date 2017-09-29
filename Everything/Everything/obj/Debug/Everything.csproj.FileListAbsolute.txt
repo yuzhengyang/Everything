@@ -19,3 +19,4 @@ D:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Everything.pdb
 D:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Y.FileQueryEngine.dll
 D:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Y.FileQueryEngine.pdb
 D:\CoCo\GitHub\Everything\Everything\Everything\bin\Debug\Y.FileQueryEngine.xml
+D:\CoCo\GitHub\Everything\Everything\Everything\obj\Debug\Everything.csproj.CoreCompileInputs.cache

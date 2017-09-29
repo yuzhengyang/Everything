@@ -143,9 +143,9 @@ namespace Y.FileQueryEngine.Win32
             IntPtr hDevice,
             UInt32 dwIoControlCode,
             IntPtr lpInBuffer,
-            Int32 nInBufferSize,
+            Int64 nInBufferSize,
             out USN_JOURNAL_DATA lpOutBuffer,
-            Int32 nOutBufferSize,
+            Int64 nOutBufferSize,
             out uint lpBytesReturned,
             IntPtr lpOverlapped);
 

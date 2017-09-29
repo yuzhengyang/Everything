@@ -29,10 +29,14 @@ namespace Everything.Views
             var drives = FileQueryEngine.GetReadyNtfsDrives();
             CBDrives.Items.AddRange(drives.ToArray());
             CBDrives.SelectedIndex = 0;
+
+            TBResult.Text = "Usn\t\tReferenceNumber\t\tFileName";
+            TBResult.AppendText(Environment.NewLine);
         }
 
         private void BTFind_Click(object sender, EventArgs e)
         {
+            BTFind.Enabled = false;
             //获取上次Usn
             long.TryParse(TBLastUsn.Text, out LastUsn);
             //获取上次FileRefNumber
@@ -43,11 +47,19 @@ namespace Everything.Views
                 {
                     uo.GetEntries(LastUsn, LastFrn, ShowEntries, 3);
                 }
+            BTFind.Enabled = true;
         }
         private void BTLine_Click(object sender, EventArgs e)
         {
             TBResult.AppendText(new string('-', 50));
             TBResult.AppendText(Environment.NewLine);
+        }
+        private void BTCreateUSN_Click(object sender, EventArgs e)
+        {
+            using (UsnOperator uo = new UsnOperator((DriveInfo)CBDrives.SelectedItem))
+            {
+                uo.CreateUsnJournal();
+            }
         }
         private void ShowEntries(DriveInfo drive, List<UsnEntry> data)
         {
@@ -75,8 +87,8 @@ namespace Everything.Views
                 e.Handled = true;
             }
         }
-        #endregion
 
+        #endregion
 
     }
 }
